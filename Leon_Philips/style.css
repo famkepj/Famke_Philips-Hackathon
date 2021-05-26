@@ -1,0 +1,437 @@
+/* Grid & styling*/
+
+.parent {
+  display:grid;
+  grid-gap: 4px;  
+  height: 100%;
+  grid-template-rows: 150px 50px 1fr 100px 200px;
+  grid-template-columns: repeat(10, 1fr) ;  
+  grid-template-areas: 
+  ". h h h h h h h h . "
+  ". n n n n n n n n . "
+  ". m m m m m m m m ."
+  ". a a a a a a a a ."
+  ". f f f f f f f f .";
+}
+
+.parent_training{
+  display:grid;
+  grid-gap: 4px;  
+  height: 100%;
+  grid-template-rows: 150px 50px auto 700px 1fr 100px 250px;
+  grid-template-columns: repeat(10, 1fr) ;  
+  grid-template-areas: 
+  ". h h h h h h h h . "
+  ". n n n n n n n n . "
+  ". m m m m m m m m ."
+  ". v v v v v v v v ."
+  ". p p p p p p p p ."
+  ". a a a a a a a a ."
+  ". f f f f f f f f .";
+}
+
+.parent_training_zondervideobox{
+  display:grid;
+  grid-gap: 4px;  
+  height: 100%;
+  grid-template-rows: 150px 50px auto 1fr 100px 250px;
+  grid-template-columns: repeat(10, 1fr) ;  
+  grid-template-areas: 
+  ". h h h h h h h h . "
+  ". n n n n n n n n . "
+  ". m m m m m m m m ."
+  ". p p p p p p p p ."
+  ". a a a a a a a a ."
+  ". f f f f f f f f .";
+}
+
+header{
+  background-color:#0091ff;
+  grid-area: h;
+  border: 2px solid grey;
+  align-content: center;
+}
+
+.navigatie{
+  background-color: #0A27CC;
+  grid-area: n;
+  border: 2px solid grey;
+  display:flex;
+  color:cornsilk;
+}
+
+main{
+  background-color: lightblue;
+  border: 2px solid grey;
+  color:white;
+  grid-area: m;
+  padding: 10px;
+}
+
+.videocontainer{
+  background-color: lightblue;
+  border: 2px solid grey;
+  grid-area: v;
+  padding-top: 10px;
+}
+
+.payproform{
+  grid-area: p;
+  background-color: lightblue;
+  border: 2px solid grey;
+  padding-top: 10px;
+}
+
+aside{
+  background-color: #0A27cc ;
+  color:white;
+  grid-area: a;
+}
+
+footer{
+  background-color: #0A27cc;
+  border: 2px solid grey;
+  color: white;
+  grid-area: f;
+}
+
+/* styling*/
+
+body{
+  background-color:lightgrey;
+  font-family: 'Merriweather', serif;
+}
+
+header img{
+  width: 640px; max-width: 96%; height: auto; 
+  display: block; margin: auto; 
+}
+
+aside img, main img{
+  width: 200px; max-width: 96%; height: auto;
+  display: block; margin: auto; 
+  padding: 5px;
+}			
+
+h2{
+  text-align: center;
+  color: #3e5cac;
+}
+
+p, form h3{
+  color: rgb(82, 80, 80)
+}
+
+.grey{
+  color: rgb(82, 80, 80);
+  font-weight:normal;
+}
+
+p a{
+  color: #3e5cac;
+  font-weight: bold;
+}
+
+.infotraining{
+  color: #3e5cac;
+  list-style:none;
+  padding: 0;
+}
+
+.centreren{
+  text-align: center;
+}
+
+footer ul{
+  list-style:none;
+}
+
+footer p{
+  text-align: center;
+  color: cornsilk;
+}
+
+a{
+  text-decoration: none;
+  color:cornsilk;
+}
+
+.button {
+  background-color: #0091ff;
+  color: cornsilk padding 20px;
+  text-align: center;
+  border: 2px solid #5d6063;
+  width: 300px; max-width: 96%;
+  margin: 20px auto;
+  font-size: 18px;
+  border-radius: 1em;
+}
+
+.navigatie a{
+  width: 100%;
+  text-align: center;
+  padding-top: 1.2rem;
+}
+
+.navigatie a:hover, .button:hover, .trainingen li:hover{
+  background-color: black;
+}
+  
+.active {
+  background-color: #4CAF50;
+}
+
+.trainingen{
+  list-style: none;
+  background-color: lightblue;
+  display:flex;
+  color:cornsilk;
+  flex-direction: column;
+  font-size: 1.8em;
+}
+
+.trainingen li{
+  border: 2px solid grey;
+  height: 100px;
+  text-align: center;
+  margin: 1%;
+  text-shadow: 4px 4px 2px grey;
+}
+
+.trainingen{
+  list-style: none;
+  padding-left: 0;
+}
+
+.grey_none{
+  list-style: none;
+  padding-left: 0;
+  color:  rgb(82, 80, 80);
+}
+
+.titel{
+  display:block;
+  font-weight: bold;
+}
+
+.circle{
+  list-style: circle;
+  color:  rgb(82, 80, 80);
+}
+
+figure{
+  text-align: center;
+}
+
+figure img{
+  width: 400px; max-width: 96%; height: auto;
+}
+
+.beginlijst{
+ font-weight:bolder;
+ color: #3e5cac;
+}
+
+.img_row{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 96%;
+  margin: auto;
+}
+
+.img_row img{
+  width: 300px;
+}
+
+.info{
+  list-style: square;
+  color: #3e5cac;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.infobox{
+  border: 2px solid grey;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.infobox ul{
+  list-style: circle;
+  color: rgb(82, 80, 80);
+}
+
+.onderstreept{
+  text-decoration: underline;
+  color: rgb(82, 80, 80);
+}
+
+.link{
+  text-decoration: underline;
+  color: rgb(82, 80, 80);
+  font-weight: normal;
+}
+
+.cursief{
+  font-style: italic;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+
+/*Styling video - aanmeldformulieren*/
+
+.video{
+  width: 500px; max-width: 96%;
+  height:350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.payproform{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.paypro{
+  height: 1500px;
+  max-width: 96%;
+}
+
+
+/*Styling aanmelden nieuwsbrief*/
+
+.aanmelding_ok nav:hover{
+  background-color: greenyellow;
+}
+
+.aanmelding_ok{
+  background-color: #0091ff;
+  text-align: center;
+  padding: 20%;
+}
+
+form{
+  padding: 10px;
+}
+
+form p {
+  color: #3e5cac;
+}
+
+
+
+/*Media Queries*/
+
+@media(min-width:1024px){
+
+  .parent{
+    grid-template-rows: 150px 1fr 200px;
+    grid-template-areas: 
+    ". h h h h h h h n . "
+    ". m m m m m m m m ."
+    ". f f f f f f a a .";
+  }
+  
+  .navigatie{ 
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+  }
+
+  .navigatie a{
+    margin-top: 0.4rem;
+  }	
+
+  .parent_training{
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-columns: repeat(10, 1fr) ;  
+    grid-template-areas: 
+    ". h h h h h h h n . "
+    ". m m m m m m m m ."
+    ". v v v p p p p p ."
+    ". f f f f f f a a .";
+  }
+
+  .parent_training_zondervideobox{
+    grid-template-rows: 150px auto auto 200px;
+    grid-template-columns: repeat(10, 1fr) ;  
+    grid-template-areas: 
+    ". h h h h h h h n . "
+    ". m m m m m m m m ."
+    ". p p p p p p p p ."
+    ". f f f f f f a a .";
+  }
+
+}
+
+@media(min-width:2560px){
+
+  .parent{
+    grid-template-rows: 150px 1fr 100px;
+    grid-template-areas: 
+    ". h h h h h h n n . "
+    ". m m m m m m f f ."
+    ". m m m m m m a a .";
+  }
+
+  .parent_training{
+    grid-template-rows: 150px 250px auto 1fr 100px;
+    grid-template-areas: 
+    ". h h h h h n n n ."
+    ". m m m m m f f f ."
+    ". m m m m m p p p ."
+    ". v v v v v p p p ."
+    ". a a a a a a a a .";
+  }
+
+  .parent_training_zondervideobox{
+    grid-template-rows: 150px 250px auto 1fr 100px;
+    grid-template-areas: 
+    ". h h h h h n n n ."
+    ". m m m m m f f f ."
+    ". m m m m m p p p ."
+    ". m m m m m p p p ."
+    ". a a a a a a a a .";
+  }
+
+  header img{
+    width: 700px; max-width: 96%; height: auto;
+    display: block; margin: auto; 
+  }
+        
+  aside img {
+    width: 200px; max-width: 96%; height: auto;
+    display: block; margin: auto; 
+  }
+
+  .navigatie a{
+    margin-top: 0.4rem;
+  }  
+
+  .payproform{
+   background: linear-gradient(cornsilk, lightblue, #0A27cc)
+  }
+
+}
